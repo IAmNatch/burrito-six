@@ -1,6 +1,6 @@
 ---
 templateKey: about-page
-title: Here's something new
+title: This is an update. Dani thinks I'm cool.
 subtitle: Here's something cool
 list-name: Another thing!
 ---
