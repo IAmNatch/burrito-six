@@ -19,9 +19,9 @@ collections:
       - {label: "Highlights", name: "highlights", widget: "list", default: ["Dopeness."]}
       - {label: "Rank Out of 5", name: "overall-score", widget: "number", min: 1, max: 5}
       - {label: "Flavor Score", name: "flavor-score", widget: "number", min: 1, max: 5}
-      - {label: "Drippage Score", name: "flavor-score", widget: "number", min: 1, max: 5}
-      - {label: "Ingedients Score", name: "flavor-score", widget: "number", min: 1, max: 5}
-      - {label: "Style Score", name: "flavor-score", widget: "number", min: 1, max: 5}
+      - {label: "Drippage Score", name: "drip-score", widget: "number", min: 1, max: 5}
+      - {label: "Ingedients Score", name: "ingredient-score", widget: "number", min: 1, max: 5}
+      - {label: "Style Score", name: "style-score", widget: "number", min: 1, max: 5}
       - {label: "Brief Review", name: 'review', widget: "text"}
 
   - name: "pages"
@@ -39,7 +39,7 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string", default: "About"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "List Name", name: 'list-name', widget: "string"}
