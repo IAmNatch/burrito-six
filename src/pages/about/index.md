@@ -1,7 +1,7 @@
 ---
-templateKey: 'about-page'
-path: /about
-title: About our values are awesome
-subtitle: text
-list name: text
+templateKey: about-page
+title: Here's something new
+subtitle: Here's something cool
+list-name: Another thing!
 ---
+
