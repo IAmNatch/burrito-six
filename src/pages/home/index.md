@@ -1,6 +1,7 @@
 ---
 templateKey: home-page
-title: This is an update. Dani thinks I'm cool.
-subtitle: Here's something cool
-list-name: Another thing!
+title: Home
+subtitle: Toronto's Favourite Burritos - Ranked -
+list-name: The Rankings
 ---
+
