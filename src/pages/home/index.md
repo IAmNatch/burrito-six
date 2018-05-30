@@ -1,6 +1,6 @@
 ---
 templateKey: home-page
-title: This is so cool
+title: hey ben
 subtitle: Toronto's Favourite Burritos - Ranked -
 list-name: The Rankings
 ---
