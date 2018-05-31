@@ -29,11 +29,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 		}
 
     const posts = result.data.allMarkdownRemark.edges
-    //console.log(result.data.allMarkdownRemark.edges)
+    console.log(result.data.allMarkdownRemark.edges, "line 32")
 
     posts.forEach(edge => {
       const id = edge.node.id
-      console.log('id', id)
+			console.log('line 36, id', id)
+			if (!String(id).includes('scores')) {
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -44,7 +45,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         context: {
           id,
         },
-      })
+			})
+		}
     })
 
 		// Tag pages:
