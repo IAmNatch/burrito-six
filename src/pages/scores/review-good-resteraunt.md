@@ -1,6 +1,6 @@
 ---
 templateKey: burrito-review
-title: good-resteraunt
+title: Burrito Boyz
 resteraunt-name: good stuff
 rank: natchi
 sub: goodness
