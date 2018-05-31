@@ -1,20 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
+import React from "react";
+import PropTypes from "prop-types";
+import Link from "gatsby-link";
 
 export default class IndexPage extends React.Component {
-  render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-    const frontmatter = posts[0].node.frontmatter;
-
-    return (
-      <section className="section">
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">{frontmatter.title}</h1>
-          </div>
-          {/* {posts
+	render() {
+		const { data } = this.props;
+		const { edges: posts } = data.allMarkdownRemark;
+		const frontmatter = posts[0].node.frontmatter;
+		return (
+			<section className="section">
+				<div className="container">
+					<div className="content">
+						<h1 className="has-text-weight-bold is-size-2">
+							Latest Stories
+						</h1>
+						<h2>{frontmatter.title}</h2>
+					</div>
+					{/* {posts
             .map(({ node: post }) => (
               <div
                 className="content"
@@ -38,37 +40,35 @@ export default class IndexPage extends React.Component {
                 </p>
               </div>
             ))} */}
-        </div>
-      </section>
-    )
-  }
+				</div>
+			</section>
+		);
+	}
 }
 
 IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+	data: PropTypes.shape({
+		allMarkdownRemark: PropTypes.shape({
+			edges: PropTypes.array
+		})
+	})
+};
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      filter: {frontmatter: {title: {eq: "Home"}}}) {
-      edges {
-       node 
-        {
-          id
-          frontmatter {
-            title
-          }
-          fields {
-            slug
-          }
-          excerpt 
-        }
-      }
-    }
-  }
-`
+	query IndexQuery {
+		allMarkdownRemark(filter: { frontmatter: { title: { eq: "Home" } } }) {
+			edges {
+				node {
+					id
+					frontmatter {
+						title
+					}
+					fields {
+						slug
+					}
+					excerpt
+				}
+			}
+		}
+	}
+`;
