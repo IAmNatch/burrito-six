@@ -7,7 +7,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
 	return graphql(`
 		{
-			allMarkdownRemark(limit: 1000) {
+			allMarkdownRemark(
+	      filter: {frontmatter: {title: {eq: "Home"}}}) {
 				edges {
 					node {
 						id
@@ -34,7 +35,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     posts.forEach(edge => {
       const id = edge.node.id
 			console.log('line 36, id', id)
-			if (!String(id).includes('scores')) {
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -46,7 +46,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           id,
         },
 			})
-		}
     })
 
 		// Tag pages:
