@@ -1,4 +1,7 @@
 // Homepage requirements
 
 // Change slug of / to use the component currently mapped to /Home
-// connect data inside to use /pages/home/index.md and also make /reviews mappable for each review. 
+// connect data inside to use /pages/home/index.md and also make /reviews mappable for each review.
+
+
+// Just a test by shane.
