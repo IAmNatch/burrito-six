@@ -12,6 +12,7 @@
     "gatsby-plugin-react-helmet": "^2.0.5",
     "gatsby-plugin-sass": "^1.0.17",
     "gatsby-plugin-sharp": "^1.6.34",
+    "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-remark-images": "^1.5.50",
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-remark": "^1.7.33",
@@ -23,6 +24,7 @@
     "react": "^16.2.0",
     "react-helmet": "^5.2.0",
     "sharp": "^0.20.3",
+    "styled-components": "^3.3.0",
     "uuid": "^3.2.1"
   },
   "keywords": [
