@@ -10,7 +10,7 @@ collections:
     label: "Burrito Reviews"
     folder: "src/pages/scores"
     create: true
-    slug: "{{slug}}"
+    slug: "review--{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "burrito-review"}
       - {label: "Resteraunt Name", name: "resteraunt-name", widget: "string"}
