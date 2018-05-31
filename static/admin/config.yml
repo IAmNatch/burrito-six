@@ -13,6 +13,7 @@ collections:
     slug: "review--{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "burrito-review"}
+      - {label: "Title", name: "title", widget: "string", default: "the-resteraunt"}
       - {label: "Resteraunt Name", name: "resteraunt-name", widget: "string"}
       - {label: "Rank", name: "rank", widget: "string"}
       - {label: "Short-Description", name: "sub", widget: "text"}
