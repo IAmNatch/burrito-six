@@ -1,5 +1,8 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a0627dbf0b9e24bff691df385b4cd97a7f19cb35
 -templateKey: home-page
 -title: Home
 -subtitle: Toronto's Favourite Burritos - Ranked -
