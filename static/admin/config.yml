@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-display_url: https://kind-varahamihira-2770af.netlify.com/products
+display_url: https://burrito-six.netlify.com
 media_folder: static/img
 public_folder: /img
 
