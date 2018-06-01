@@ -2,15 +2,44 @@
 
 
 .index-scorecard-wrapper {
-    padding-left:20vmax;
-    padding-right:20vmax;
+    padding-left:20%;
+    padding-right:20%;
 }
 
 .scorecard-wrapper {
     margin:auto;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     padding:5%;
     box-shadow: 0 0 3px 3px rgba(1,1,1,0.4);
+}
+
+.scorecard-ranking {
+    display:inline-block; 
+    margin-bottom: 3vmax;
+}
+
+.scorecard-ranking-number {
+    font-size: 7vmax;
+    position:absolute;
+    margin-top:-7.5vmax;
+    font-weight:700;
+}
+
+.scorecard-ranking-name {
+    font-size: 2vmax;
+    width:42.5%;
+    position:absolute;
+    margin-top:-2.5vmax;
+    margin-left: 5vmax;
+    font-weight:700;
+    border-bottom:2px solid #333;
+}
+
+.scorecard-ranking-subheader {
+    font-size: 1vmax;
+    font-weight:200;
+    margin-left: 5vmax;
+    margin-top:1.5vmax;
 }
