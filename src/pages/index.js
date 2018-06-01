@@ -16,7 +16,8 @@ export default class IndexPage extends React.Component {
             <h1 className="has-text-weight-bold is-size-2">{frontmatter.title}</h1>
           </div>
           <div className="index-scorecard-wrapper">
-            <ScoreCard />
+          {/* BENNNN CHEEE THIS IS HOW YOU PASS PROPS!!!!! -DANI */}
+            <ScoreCard title={frontmatter.title}/>
           </div>
           {/* {posts
             .map(({ node: post }) => (
