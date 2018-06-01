@@ -1,0 +1,16 @@
+/* Will switch to scss once testing is done */
+
+
+.index-scorecard-wrapper {
+    padding-left:20vmax;
+    padding-right:20vmax;
+}
+
+.scorecard-wrapper {
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:5%;
+    box-shadow: 0 0 3px 3px rgba(1,1,1,0.4);
+}
