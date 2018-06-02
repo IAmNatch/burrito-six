@@ -2,10 +2,10 @@ import React from 'react'
 // Uncomment whenwe start passing props:
 // import PropTypes from 'prop-types'
 
-const ScoreCard = ({ scores }) => (
+const ScoreCard = ({ title }) => (
     <div className="scorecard-wrapper">
         <div className="scorecard-ranking">
-            <h2 className="scorecard-ranking-number">1</h2>
+            <h2 className="scorecard-ranking-number">{title}</h2>
             <p className="scorecard-ranking-name">Wilbur Mexicana</p>
             <p className="scorecard-ranking-subheader">A place for friends, great vibes</p>
         </div>
