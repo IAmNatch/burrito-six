@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
-// Importing Ben's Components:
-import ScoreCard from "../components/ScoreCard";
+
+import HomeSplash from '../components/HomeSplash';
+import HomeBody from "../components/HomeBody";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,15 +11,13 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     const frontmatter = posts[0].node.frontmatter;
     return (
-      <section className="section">
-        <div className="container">
-          <div className="content">
+      <div>
+          {/* <div className="content">
             <h1 className="has-text-weight-bold is-size-2">{frontmatter.title}</h1>
-          </div>
-          <div className="index-scorecard-wrapper">
-          {/* BENNNN CHEEE THIS IS HOW YOU PASS PROPS!!!!! -DANI */}
-            <ScoreCard title={frontmatter.title}/>
-          </div>
+          </div> */}
+
+            <HomeSplash />
+            <HomeBody />
           {/* {posts
             .map(({ node: post }) => (
               <div
@@ -43,8 +42,8 @@ export default class IndexPage extends React.Component {
                 </p>
               </div>
             ))} */}
-        </div>
-      </section>
+
+      </div>
     )
   }
 }
