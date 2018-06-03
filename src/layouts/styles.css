@@ -1,33 +1,33 @@
 /* Will switch to scss once testing is done */
 
 
-.index-scorecard-wrapper {
+/* .index-scorecard-wrapper {
     padding-left:20%;
     padding-right:20%;
-}
+} */
 
-.scorecard-wrapper {
-    margin:auto;
+/* .scorecard-wrapper {
+    margin:auto; */
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    padding:5%;
+    /* padding:5%;
     box-shadow: 0 0 3px 3px rgba(1,1,1,0.4);
-}
+} */
 
-.scorecard-ranking {
+/* .scorecard-ranking {
     display:inline-block; 
     margin-bottom: 2vmax;
-}
+} */
 
-.scorecard-ranking-number {
+/* .scorecard-ranking-number {
     font-size: 7vmax;
     position:absolute;
     margin-top:-7.5vmax;
     font-weight:700;
-}
+} */
 
-.scorecard-ranking-name {
+/* .scorecard-ranking-name {
     font-size: 2vmax;
     width:42.5%;
     position:absolute;
@@ -35,14 +35,14 @@
     margin-left: 5vmax;
     font-weight:700;
     border-bottom:2px solid #333;
-}
+} */
 
-.scorecard-ranking-subheader {
+/* .scorecard-ranking-subheader {
     font-size: 1.5vmax;
     font-weight:200;
     margin-left: 5vmax;
     margin-top:1.5vmax;
-}
+} */
 /* Body */
 .scorecard-content-container {
     padding-left: 5%;

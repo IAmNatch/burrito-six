@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 // Importing Ben's Components:
-import ScoreCard from "../components/ScoreCard";
+import HomeBody from "../components/HomeBody";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -15,10 +15,7 @@ export default class IndexPage extends React.Component {
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">{frontmatter.title}</h1>
           </div>
-          <div className="index-scorecard-wrapper">
-          {/* BENNNN CHEEE THIS IS HOW YOU PASS PROPS!!!!! -DANI */}
-            <ScoreCard title={frontmatter.title}/>
-          </div>
+            <HomeBody />
           {/* {posts
             .map(({ node: post }) => (
               <div
