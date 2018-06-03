@@ -32,6 +32,7 @@ const ScoreCardRankingWrapper = styled.div`
     width:100%;
     padding:5%;
     box-shadow: 0 0 3px 3px rgba(1,1,1,0.4);
+    background-color:white;
 `
 
 const ScoreCardContentContainer = styled.div`

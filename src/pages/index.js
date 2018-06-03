@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
+
+import HomeSplash from '../components/HomeSplash';
 import HomeBody from "../components/HomeBody";
 
 export default class IndexPage extends React.Component {
@@ -9,11 +11,12 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     const frontmatter = posts[0].node.frontmatter;
     return (
-      <section className="section">
-        <div className="container">
-          <div className="content">
+      <div>
+          {/* <div className="content">
             <h1 className="has-text-weight-bold is-size-2">{frontmatter.title}</h1>
-          </div>
+          </div> */}
+
+            <HomeSplash />
             <HomeBody />
           {/* {posts
             .map(({ node: post }) => (
@@ -39,8 +42,8 @@ export default class IndexPage extends React.Component {
                 </p>
               </div>
             ))} */}
-        </div>
-      </section>
+
+      </div>
     )
   }
 }
