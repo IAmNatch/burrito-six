@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
-// Importing Ben's Components:
 import HomeBody from "../components/HomeBody";
 
 export default class IndexPage extends React.Component {
