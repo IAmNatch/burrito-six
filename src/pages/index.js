@@ -15,9 +15,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <div>
-          {/* <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">{frontmatter.title}</h1>
-          </div> */}
+
 
             <HomeSplash />
             
@@ -32,20 +30,6 @@ export default class IndexPage extends React.Component {
                   
               
               />
-              
-/*               <div
-                className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-          
-                    {post.frontmatter.title}
-       
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-              </div> */
             ))}
 
       </div>
