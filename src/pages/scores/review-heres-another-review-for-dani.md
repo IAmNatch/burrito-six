@@ -1,7 +1,7 @@
 ---
 templateKey: burrito-review
 title: Heres another review for dani
-resteraunt_name: A resteraunt of sushi
+resteraunt_name: Golden Sushi
 rank: '2'
 sub: 'I barfed. '
 highlights:
