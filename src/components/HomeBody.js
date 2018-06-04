@@ -9,11 +9,22 @@ const HomeBodyWrapper = styled.div`
     padding-top:5%;
     padding-bottom:7.5%;
 `
+// const AllScoreCards = props.
 
-export default (props) => (
+export default (props) => {
+    console.log(props.posts)
+    
+    let ScoreCardJSX = props.posts.map(({node:element},i)=>{
+        let frontmatter = element.frontmatter
+        // console.log(frontmatter)
+       return <ScoreCard key={i} data={frontmatter} />
+    })
+    console.log(ScoreCardJSX)
+
+    return (
     <HomeBodyWrapper>
-        <ScoreCard
-          {...props}
-        />
+        {ScoreCardJSX}
     </HomeBodyWrapper>
-)
+    )
+    
+}

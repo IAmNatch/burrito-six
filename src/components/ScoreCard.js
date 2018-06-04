@@ -33,6 +33,7 @@ const ScoreCardRankingWrapper = styled.div`
   padding: 5%;
   box-shadow: 0 0 3px 3px rgba(1, 1, 1, 0.4);
   background-color: white;
+  margin-bottom:10%;
 `;
 
 const ScoreCardContentContainer = styled.div`
@@ -56,19 +57,11 @@ const ScoreCardContentScore = styled.span`
   font-weight: 700;
 `;
 
-export default ({
-  title,
-  score,
-  resteraunt_name,
-  overall_score,
-  drip_score,
-  ingredient_score,
-  flavor_score,
-  style_score,
-  highlights,
-  rank,
-  sub,
-}) => (
+export default (props) => {
+  const { drip_score, rank, flavor_score, highlights, ingredient_score, overall_score, resteraunt_name, review, style_score, sub, title } = props.data;
+  // console.log(props.data)
+  // console.log( drip_score, rank, flavor_score, highlights, ingredient_score, overall_score, resteraunt_name, review, style_score, sub, title )
+  return(
   <ScoreCardRankingWrapper>
     <ScoreCardRank>{rank}</ScoreCardRank>
     <ScoreCardName>{resteraunt_name}</ScoreCardName>
@@ -86,5 +79,5 @@ export default ({
         </p>
       </ScoreCardAlignRight>
     </ScoreCardContentContainer>
-  </ScoreCardRankingWrapper>
-);
+  </ScoreCardRankingWrapper>)
+};

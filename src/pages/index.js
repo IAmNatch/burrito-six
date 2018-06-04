@@ -11,12 +11,12 @@ export default class IndexPage extends React.Component {
     const { page, scores } = data;
     const { edges: posts } = scores;
     // const frontmatter = posts[0].node.frontmatter;
-
-    //console.log('REVIEW', frontmatter.review)
+    console.log("props in index",this.props)
+    console.log('REVIEW', posts)
     return (
       <div>
         <HomeSplash />
-        {posts.map(({ node: post }) => <HomeBody {...post.frontmatter} />)}
+        <HomeBody posts={posts} />
       </div>
     );
   }
