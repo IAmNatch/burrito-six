@@ -23,6 +23,5 @@ export default props => {
 		},
 	]);
 
-	console.log(ScoreCardJSX);
 	return <HomeBodyWrapper>{ScoreCardsSorted}</HomeBodyWrapper>;
 };

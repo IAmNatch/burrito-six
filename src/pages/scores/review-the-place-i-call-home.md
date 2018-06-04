@@ -1,13 +1,10 @@
 ---
 templateKey: burrito-review
 title: Burrito Boyz
-resteraunt_name: Burrito Boyz
+resteraunt_name: Burrito Boyzzzz
 rank: 3
 sub: 'When you need a solid, tasty, burrito, day or night- Burrito Boyz is there. '
-highlights:
-  - highlight_data: one
-  - highlight_data: two
-  - highlight_data: three
+highlights: [Introduction, Event Types]
 overall_score: 4
 flavor_score: 3
 drip_score: 3
