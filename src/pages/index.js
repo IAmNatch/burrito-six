@@ -8,8 +8,9 @@ import HomeBody from "../components/HomeBody";
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-    const frontmatter = posts[0].node.frontmatter;
+    const { page, scores } = data;
+    const { edges: posts } = scores;
+    // const frontmatter = posts[0].node.frontmatter;
 
     //console.log('REVIEW', frontmatter.review)
 
@@ -46,19 +47,44 @@ IndexPage.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      filter: {frontmatter: {templateKey: {eq: "burrito-review"}}}) {
-      edges {
-       node
-        {
-          id
-          frontmatter {
-            title
-            restaurant
-          }
-        }
+query IndexQuery {
+page: allMarkdownRemark(
+  filter: {frontmatter: {title: {eq: "Home"}}}) {
+  edges {
+   node
+    {
+      id
+      frontmatter {
+        title
+        subtitle
+        list_name
       }
     }
   }
+}
+scores: allMarkdownRemark(
+  filter: {frontmatter: {templateKey: {eq: "burrito-review"}}}) {
+  edges {
+   node
+    {
+      id
+      frontmatter {
+        title
+        Rating
+        overall_score
+        drip_score
+        style_score
+        flavor_score
+        ingredient_score
+        review
+        highlights
+        sub
+      }
+      fields {
+        slug
+      }
+    }
+  }
+}
+}
 `
