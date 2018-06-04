@@ -13,7 +13,6 @@ export default class IndexPage extends React.Component {
     // const frontmatter = posts[0].node.frontmatter;
 
     //console.log('REVIEW', frontmatter.review)
-
     return (
       <div>
         <HomeSplash />
