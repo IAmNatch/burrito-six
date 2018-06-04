@@ -15,4 +15,3 @@ ingredient_score: 3
 style_score: 3
 review: It's good!
 ---
-

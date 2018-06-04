@@ -9,9 +9,9 @@ highlights:
   - highlight_data: two
   - highlight_data: three
 overall_score: 4
-flavor_score: 4
-drip_score: 5
-ingredient_score: 3
+flavor_score: 3
+drip_score: 3
+ingredient_score: 2
 style_score: 3
 review: >-
   Okay so imagine you eat a burrito, and it tastes just like a burrito should.
