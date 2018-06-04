@@ -18,17 +18,17 @@ export default class IndexPage extends React.Component {
 
 
             <HomeSplash />
-            
-            
+
+
           {posts
             .map(({ node: post }) => (
-              
-              <HomeBody 
+
+              <HomeBody
                   title={post.frontmatter.title}
                   score={post.frontmatter.flavor_score}
-                  
-                  
-              
+
+
+
               />
             ))}
 
@@ -50,7 +50,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       filter: {frontmatter: {templateKey: {eq: "burrito-review"}}}) {
       edges {
-       node 
+       node
         {
           id
           frontmatter {
