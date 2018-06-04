@@ -1,7 +1,7 @@
 ---
 templateKey: burrito-review
-title: The place I call home
-resteraunt_name: 'My Lonely home, it''s just a pizza hut'
+title: 'This is a cool review. '
+resteraunt_name: Pizza Hut
 rank: '5'
 sub: 'We make shit work gud. '
 highlights:
