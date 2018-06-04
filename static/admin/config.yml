@@ -18,8 +18,8 @@ collections:
       - {label: "Rank", name: "rank", widget: "string"}
       - {label: "Short-Description", name: "sub", widget: "text"}
       - {label: "Highlights", name: "highlights", widget: "list", default: ["Dopeness."]}
-      - {label: "Rank Out of 5", name: "overall-score", widget: "number", min: 1, max: 5}
-      - {label: "Flavor Score", name: "flavor-score", widget: "number", min: 1, max: 5}
+      - {label: "Rank Out of 5", name: "overall-score", widget: "number", valueType: "int", min: 1, max: 5}
+      - {label: "Flavor Score", name: "flavor-score", widget: "number", valueType: "int", min: 1, max: 5}
       - {label: "Drippage Score", name: "drip-score", widget: "number", min: 1, max: 5}
       - {label: "Ingedients Score", name: "ingredient-score", widget: "number", min: 1, max: 5}
       - {label: "Style Score", name: "style-score", widget: "number", min: 1, max: 5}
