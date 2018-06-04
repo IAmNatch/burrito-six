@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ScoreCard from "./ScoreCard.js";
+import { sortBy } from "lodash";
 
 const HomeBodyWrapper = styled.div`
 	padding-left: 20%;
@@ -16,6 +17,12 @@ export default props => {
 		let frontmatter = element.frontmatter;
 		return <ScoreCard key={i} data={frontmatter} />;
 	});
+	let ScoreCardsSorted = sortBy(ScoreCardJSX, [
+		function(item) {
+			return item.props.data.rank;
+		},
+	]);
 
-	return <HomeBodyWrapper>{ScoreCardJSX}</HomeBodyWrapper>;
+	console.log(ScoreCardJSX);
+	return <HomeBodyWrapper>{ScoreCardsSorted}</HomeBodyWrapper>;
 };
