@@ -10,8 +10,12 @@ const HomeBodyWrapper = styled.div`
     padding-bottom:7.5%;
 `
 
-export default () => (
+export default ( { title, score } ) => (
     <HomeBodyWrapper>
-        <ScoreCard />
+        <ScoreCard 
+            title={title}
+            score={score}
+        
+        />
     </HomeBodyWrapper>
 )

@@ -56,14 +56,14 @@ const ScoreCardContentScore = styled.span`
     font-weight: 700;
 `
 
-export default () => (
+export default ( { title, score } ) => (
     <ScoreCardRankingWrapper>
         <ScoreCardRank>1</ScoreCardRank>
-        <ScoreCardName>Wilbur Mexicana</ScoreCardName>
+        <ScoreCardName>{title}</ScoreCardName>
         <ScoreCardSubheader>A place for friends, great vibes</ScoreCardSubheader>
         <ScoreCardContentContainer>
             <ol>
-            <ScoreCardContentListItem>Crispy</ScoreCardContentListItem>
+            <ScoreCardContentListItem>{score}</ScoreCardContentListItem>
             <ScoreCardContentListItem>Crispy</ScoreCardContentListItem>
             <ScoreCardContentListItem>Crispy</ScoreCardContentListItem>
             </ol>
