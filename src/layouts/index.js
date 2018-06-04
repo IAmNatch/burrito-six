@@ -4,8 +4,6 @@ import Helmet from "react-helmet";
 
 import Navbar from "../components/Navbar";
 import "./all.sass";
-// using plain css for now - will switch to scss once i check to see things are working correctly w/ gatsby
-import './styles.css';
 
 const TemplateWrapper = ({ children }) => (
 	<div>

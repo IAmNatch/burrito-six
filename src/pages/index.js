@@ -1,76 +1,76 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
-// Importing Ben's Components:
-import ScoreCard from "../components/ScoreCard";
+
+import HomeSplash from "../components/HomeSplash";
+import HomeBody from "../components/HomeBody";
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-    const frontmatter = posts[0].node.frontmatter;
+    const { data } = this.props;
+    const { page, scores } = data;
+    const { edges: posts } = scores;
+    // const frontmatter = posts[0].node.frontmatter;
+
+    //console.log('REVIEW', frontmatter.review)
+
     return (
-      <section className="section">
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">{frontmatter.title}</h1>
-          </div>
-          <div className="index-scorecard-wrapper">
-          {/* BENNNN CHEEE THIS IS HOW YOU PASS PROPS!!!!! -DANI */}
-            <ScoreCard title={frontmatter.title}/>
-          </div>
-          {/* {posts
-            .map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
-            ))} */}
-        </div>
-      </section>
-    )
+      <div>
+        <HomeSplash />
+        {posts.map(({ node: post }) => <HomeBody {...post.frontmatter} />)}
+      </div>
+    );
   }
 }
 
 IndexPage.propTypes = {
-	data: PropTypes.shape({
-		allMarkdownRemark: PropTypes.shape({
-			edges: PropTypes.array
-		})
-	})
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
 };
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(
-      filter: {frontmatter: {title: {eq: "Home"}}}) {
+    page: allMarkdownRemark(
+      filter: { frontmatter: { title: { eq: "Home" } } }
+    ) {
       edges {
-       node 
-        {
+        node {
           id
           frontmatter {
             title
-            restaurant
+            subtitle
+            list_name
+          }
+        }
+      }
+    }
+    scores: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "burrito-review" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            rank
+            overall_score
+            drip_score
+            style_score
+            flavor_score
+            ingredient_score
+            review
+            resteraunt_name
+            highlights
+            sub
+          }
+          fields {
+            slug
           }
         }
       }
     }
   }
-`
+`;
