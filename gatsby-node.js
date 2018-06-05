@@ -7,8 +7,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
 	return graphql(`
 		{
-			allMarkdownRemark(
-	      filter: {frontmatter: {title: {eq: "Home"}}}) {
+			allMarkdownRemark(filter: { frontmatter: { isPage: { eq: true } } }) {
 				edges {
 					node {
 						id
@@ -29,24 +28,24 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 			return Promise.reject(result.errors);
 		}
 
-    const posts = result.data.allMarkdownRemark.edges
-    console.log(result.data.allMarkdownRemark.edges, "line 32")
+		const posts = result.data.allMarkdownRemark.edges;
+		console.log(result.data.allMarkdownRemark.edges, "line 32");
 
-    posts.forEach(edge => {
-      const id = edge.node.id
-			console.log('line 36, id', id)
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-        },
-			})
-    })
+		posts.forEach(edge => {
+			const id = edge.node.id;
+			console.log("line 36, id", id);
+			createPage({
+				path: edge.node.fields.slug,
+				tags: edge.node.frontmatter.tags,
+				component: path.resolve(
+					`src/templates/${String(edge.node.frontmatter.templateKey)}.js`,
+				),
+				// additional data can be passed via context
+				context: {
+					id,
+				},
+			});
+		});
 
 		// Tag pages:
 		let tags = [];
@@ -67,8 +66,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 				path: tagPath,
 				component: path.resolve(`src/templates/tags.js`),
 				context: {
-					tag
-				}
+					tag,
+				},
 			});
 		});
 	});
@@ -82,7 +81,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 		createNodeField({
 			name: `slug`,
 			node,
-			value
+			value,
 		});
 	}
 };

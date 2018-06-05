@@ -38,6 +38,7 @@ collections:
         name: "home"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+          - {label: "Is A Page", name: "isPage", widget: "hidden", default: true}
           - {label: "Title", name: "title", widget: "string", default: "Home"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "List Name", name: 'list-name', widget: "string"}
@@ -46,6 +47,7 @@ collections:
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Is A Page", name: "isPage", widget: "hidden", default: true}
           - {label: "Title", name: "title", widget: "string", default: "About"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "List Name", name: 'list-name', widget: "string"}

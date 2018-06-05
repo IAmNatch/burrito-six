@@ -19,4 +19,3 @@ review: |2-
     salsa, but you also won't frown as it bursts all over your new shirt. Good
     shit.
 ---
-

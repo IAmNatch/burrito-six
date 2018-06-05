@@ -78,7 +78,9 @@ export default props => {
 			<ScoreCardSubheader>{sub}</ScoreCardSubheader>
 			<ScoreCardContentContainer>
 				<ol>
-					<ScoreCardContentListItem>{"hello"}</ScoreCardContentListItem>
+					<ScoreCardContentListItem>
+						{highlights[0].highlight_data}
+					</ScoreCardContentListItem>
 					<ScoreCardContentListItem>Crispy</ScoreCardContentListItem>
 					<ScoreCardContentListItem>Crispy</ScoreCardContentListItem>
 				</ol>
