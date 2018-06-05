@@ -1,14 +1,14 @@
 ---
 templateKey: burrito-review
-title: Burrito Boys
-resteraunt_name: Burrito Boys
+title: Burrito Boyzzz
+resteraunt_name: Burrito Boyzzz
 rank: 1
 sub: 'When you need a solid, tasty, burrito, day or night- Burrito Boyz is there. '
 highlights:
   - highlight_data: My first
   - highlight_data: My Second
   - highlight_data: My Third
-overall_score: 4.5
+overall_score: 2
 flavor_score: 4.3
 drip_score: 2.2
 ingredient_score: 4
