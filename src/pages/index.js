@@ -33,7 +33,7 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
 	query IndexQuery {
 		page: allMarkdownRemark(
-			filter: { frontmatter: { title: { eq: "Home" } } }
+			filter: { frontmatter: { isPage: { eq: true } } }
 		) {
 			edges {
 				node {
