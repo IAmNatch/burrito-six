@@ -1,27 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
-import styled from 'styled-components';
+import Helmet from "react-helmet";
+import styled from "styled-components";
 
-import { PageWrapper } from '../components/about/Layout.js';
-import { Header } from '../components/about/header/Header.js';
-import { Description } from '../components/Description.js';
+import { PageWrapper } from "../components/about/Layout.js";
+import { Header } from "../components/about/header/Header.js";
+import { Description } from "../components/Description.js";
 
 export const AboutPageTemplate = ({
-  title,
-  subtitle,
-  list_name,
-  content,
-	contentComponent
+	title,
+	subtitle,
+	list_name,
+	content,
+	contentComponent,
 }) => {
 	const PageContent = contentComponent || Content;
 
 	return (
-      <PageWrapper>
-        <Header title={title} />
-        <Description content={content}/>
-      </PageWrapper> 
-
+		<PageWrapper>
+			<Helmet title="Burri.to | About " />
+			<Header title={title} />
+			<Description content={content} />
+		</PageWrapper>
 	);
 };
 
@@ -38,9 +39,9 @@ const AboutPage = ({ data }) => {
 		<AboutPageTemplate
 			contentComponent={HTMLContent}
 			title={post.frontmatter.title}
-      list_name={post.frontmatter.list_name}
-      subtitle={post.frontmatter.subtitle}
-      content={post.html}
+			list_name={post.frontmatter.list_name}
+			subtitle={post.frontmatter.subtitle}
+			content={post.html}
 		/>
 	);
 };
@@ -56,10 +57,10 @@ export const aboutPageQuery = graphql`
 		markdownRemark(id: { eq: $id }) {
 			frontmatter {
 				title
-        subtitle
-        list_name
-      }
-      html
+				subtitle
+				list_name
+			}
+			html
 		}
 	}
 `;
