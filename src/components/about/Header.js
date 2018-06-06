@@ -11,7 +11,7 @@ const HeaderItem = (props) => {
 export const Header = (props) => {
     return (
         <HeaderWrapper>
-            <HeaderItem title="Hello" />
+            <HeaderItem title="About" />
         </HeaderWrapper>
     )
 }
