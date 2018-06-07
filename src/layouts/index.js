@@ -6,9 +6,8 @@ import Navbar from "../components/Navbar";
 import "./all.sass";
 
 const TemplateWrapper = ({ children }) => (
-	<div>
-		<Helmet title="Burri.to | Home " />
-		<Navbar />
+	<div style={{ minHeight: '100vh', backgroundColor: '#00AF96'}}>
+		<Helmet title="Burri.to | Home" />
 		<div>{children()}</div>
 	</div>
 );

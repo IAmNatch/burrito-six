@@ -51,7 +51,7 @@ project
 │   │     └── scores  
 │   │     │    └ *resteraunt-name.md*
 │   │     └ 404.js
-│   │     └ index.js // Not a .md data, template for the index page.
+│   │     └ index.js // Not an .md data, template for the index page.
 │   │                    all other templates live in /templates
 │   └── pages
 └───

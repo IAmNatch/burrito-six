@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { PageWrapper } from "../components/about/Layout.js";
 import { Header } from "../components/about/header/Header.js";
 import { Description } from "../components/Description.js";
+import { Nav } from "../components/Nav.js";
 
 export const AboutPageTemplate = ({
 	title,
@@ -20,6 +21,7 @@ export const AboutPageTemplate = ({
 	return (
 		<PageWrapper>
 			<Helmet title="Burri.to | About " />
+			<Nav />
 			<Header title={title} />
 			<Description content={content} />
 		</PageWrapper>

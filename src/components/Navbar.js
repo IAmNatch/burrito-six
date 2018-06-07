@@ -1,8 +1,14 @@
 import React from "react";
 import Link from "gatsby-link";
+import styled from "styled-components";
 
 import github from "../img/github-icon.svg";
 import logo from "../img/logo.svg";
+
+const NavWrapper = styled.div`
+  grid-template-rows: [nav]10vh;
+  display: grid;
+`
 
 const Navbar = () => (
   <nav className="navbar is-transparent">
@@ -23,40 +29,7 @@ const Navbar = () => (
         </Link>
       </div>
       <div className="navbar-end">
-        <a
-          className="navbar-item"
-          href="https://github.com/ben-che"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-
-        {/* Insert Shane's Github */}
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-
-        {/* Insert Dani's Github */}
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
+          <p><i>Last updated June 2018</i></p>
       </div>
     </div>
   </nav>
