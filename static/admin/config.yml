@@ -14,7 +14,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "burrito-review"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Resteraunt Name", name: "resteraunt_name", widget: "string"}
+      - {label: "Restaurant Name", name: "restaurant_name", widget: "string"}
       - {label: "Rank", name: "rank", widget: "number", valueType: 'float'}
       - {label: "Short-Description", name: "sub", widget: "text"}
       - label: "Highlights"
@@ -26,7 +26,7 @@ collections:
       - {label: "Rank Out of 5", name: "overall_score", widget: "number", valueType: "float", min: 1, max: 5}
       - {label: "Flavor Score", name: "flavor_score", widget: "number", valueType: "float", min: 1, max: 5}
       - {label: "Drippage Score", name: "drip_score", widget: "number", valueType: "float", min: 1, max: 5}
-      - {label: "Ingedients Score", name: "ingredient_score", widget: "number", valueType: "float", min: 1, max: 5}
+      - {label: "Ingredients Score", name: "ingredient_score", widget: "number", valueType: "float", min: 1, max: 5}
       - {label: "Style Score", name: "style_score", widget: "number", valueType: "float", min: 1, max: 5}
       - {label: "Brief Review", name: 'review', widget: "text"}
 

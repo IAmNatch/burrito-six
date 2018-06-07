@@ -89,7 +89,7 @@ export default props => {
 		highlights,
 		ingredient_score,
 		overall_score,
-		resteraunt_name,
+		restaurant_name,
 		review,
 		style_score,
 		sub,
@@ -99,9 +99,9 @@ export default props => {
 		<ScoreCardRankingWrapper>
       <ScoreCardUpperWrapper>
         <ScoreCardRank>{rank}</ScoreCardRank>
-        <ScoreCardName>{resteraunt_name}</ScoreCardName>
+        <ScoreCardName>{restaurant_name}</ScoreCardName>
       </ScoreCardUpperWrapper>
-      
+
 			<ScoreCardSubheader>{sub}</ScoreCardSubheader>
 
       <ScoreCardMiddleWrapper>
