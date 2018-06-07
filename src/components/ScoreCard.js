@@ -114,7 +114,7 @@ class ScoreCard extends Component {
 
   render() {
     let {
-      drip_score, 
+      drip_score,
       rank,
       flavor_score,
       highlights,
@@ -132,7 +132,7 @@ class ScoreCard extends Component {
             <ScoreCardRank>{rank}</ScoreCardRank>
             <ScoreCardName>{restaurant_name}</ScoreCardName>
           </ScoreCardUpperWrapper>
-          
+
           <ScoreCardSubheader>{sub}</ScoreCardSubheader>
 
           <ScoreCardMiddleWrapper>
@@ -150,21 +150,21 @@ class ScoreCard extends Component {
                 </p>
               </ScoreCardAlignRight>
             </ScoreCardContentContainer>
-            
+
           </ScoreCardMiddleWrapper>
 
-          
 
-         { this.state.open ? <ScoreCardMoreWrapper>aaaa</ScoreCardMoreWrapper> : null } 
-        
+
+         { this.state.open ? <ScoreCardMoreWrapper>aaaa</ScoreCardMoreWrapper> : null }
+
          <ScoreCardBottomWrapper>
             <ScoreCardShowMore onClick= { this.expandCard }>More</ScoreCardShowMore>
           </ScoreCardBottomWrapper>
 
         </ScoreCardRankingWrapper>
-      ) 
+      )
   }
-    
+
 }
 
 export default ScoreCard;

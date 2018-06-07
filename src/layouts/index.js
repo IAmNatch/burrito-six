@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
 import Navbar from "../components/Navbar";
-import "./all.sass";
 
 const TemplateWrapper = ({ children }) => {
 		const {pathname} = window.location;
@@ -11,7 +10,9 @@ const TemplateWrapper = ({ children }) => {
 
 		return (
 			<div style={{ minHeight: '100vh', backgroundColor: background}}>
-				<Helmet title="Burri.to | Home" />
+				<Helmet title="Burri.to | Home" >
+					<link rel="stylesheet" type="text/css" href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' />
+				</Helmet>
 				<div>{children()}</div>
 			</div>
 	)
