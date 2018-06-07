@@ -97,9 +97,38 @@ const ScoreCardShowMore = styled.p`
 `
 
 const ScoreCardMoreWrapper = styled.div`
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  margin-left:-5%;
+  flex-direction:column;
+  padding-left:10%;
+  padding-right:10%;
+`
+
+const ScoreCardMoreSubtitle = styled.div`
+  align-self:center;
+  border-bottom: thin solid #333;
+  
+`
+
+const ScoreCardMoreScoreWrapper = styled.div `
+  display:flex;
+  width:100%;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+const ScoreCardMoreScore = styled.div `
+  display:flex;
+  width:100%;
+  justify-content:center;
 
 `
 
+const ScoreCardMoreReview = styled.p `
+
+`
 
 class ScoreCard extends Component {
   state = {
@@ -155,10 +184,24 @@ class ScoreCard extends Component {
 
 
 
-         { this.state.open ? <ScoreCardMoreWrapper>aaaa</ScoreCardMoreWrapper> : null }
+         { this.state.open ? 
+          <ScoreCardMoreWrapper> 
+            <ScoreCardMoreSubtitle>
+              The Nitty Gritty
+            </ScoreCardMoreSubtitle> 
+            <ScoreCardMoreScoreWrapper>
+              <ScoreCardMoreScore>Flavour</ScoreCardMoreScore>
+              <ScoreCardMoreScore>Drippage</ScoreCardMoreScore>
+              <ScoreCardMoreScore>Ingredients</ScoreCardMoreScore>
+              <ScoreCardMoreScore>Style</ScoreCardMoreScore>
+            </ScoreCardMoreScoreWrapper>
+            <ScoreCardMoreReview>
+                {review}
+            </ScoreCardMoreReview>
+          </ScoreCardMoreWrapper> : null }
 
          <ScoreCardBottomWrapper>
-            <ScoreCardShowMore onClick= { this.expandCard }>More</ScoreCardShowMore>
+            <ScoreCardShowMore onClick= { this.expandCard }> { this.state.open? 'Less' : "More" } </ScoreCardShowMore>
           </ScoreCardBottomWrapper>
 
         </ScoreCardRankingWrapper>
