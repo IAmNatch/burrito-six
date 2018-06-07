@@ -120,7 +120,7 @@ class ScoreCard extends Component {
       highlights,
       ingredient_score,
       overall_score,
-      resteraunt_name,
+      restaurant_name,
       review,
       style_score,
       sub,
@@ -130,7 +130,7 @@ class ScoreCard extends Component {
         <ScoreCardRankingWrapper>
           <ScoreCardUpperWrapper>
             <ScoreCardRank>{rank}</ScoreCardRank>
-            <ScoreCardName>{resteraunt_name}</ScoreCardName>
+            <ScoreCardName>{restaurant_name}</ScoreCardName>
           </ScoreCardUpperWrapper>
           
           <ScoreCardSubheader>{sub}</ScoreCardSubheader>
