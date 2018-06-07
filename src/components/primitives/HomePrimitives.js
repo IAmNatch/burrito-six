@@ -15,7 +15,9 @@ export const Subtitle = styled.p`
     font-weight:200;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
-    color: ${props=>props.color}
+    color: ${props=>props.color};
+    display: ${props => props.centerV ? "flex":""}
+    align-items: ${props => props.centerV ? "center":""}
 `
 
 export const Separator = styled.div`
@@ -24,3 +26,20 @@ export const Separator = styled.div`
     margin: ${props => props.margin}
 `
 
+export const OrderedListItem = styled.li`
+    font-size: 1.25vmax;
+    display:list-item;
+    line-height: 1.5;
+`
+export const MainBigText = styled.p`
+    font-size: 4.5vmax;
+    color: ${props => props.color};
+    font-weight: 700;
+    margin:${props => props.margin}
+`
+
+export const MainText = styled.p`
+    font-size: 1vmax;
+    color: #333;
+    font-weight:400;
+`
