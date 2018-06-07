@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+// primitives:
+import HomePrimitives, { MainHeader, MainSubheader, Separator, Subtitle } from './primitives/HomePrimitives'
 
 const ScoreCardRankingWrapper = styled.div`
 	display:block;
@@ -17,29 +19,23 @@ const ScoreCardLowerWrapper = styled.div`
   display:flex;
 `
 
-const ScoreCardRank = styled.h2`
-	font-size: 7vmax;
+const ScoreCardRank = styled.div`
   justify-content: flex-start;
-  margin-top:-5vmax;
-  font-weight: 700;
+  margin-top:-8vmax;
 `;
 
-const ScoreCardName = styled.p`
-	font-size: 3.5vmax;
+const ScoreCardName = styled.div`
   width: 50%;
   justify-content: flex-start;
 	font-weight: 700;
-  border-bottom: 2px solid #333;
   padding-bottom:0;
   margin-left:4vmin;
 `;
 
-const ScoreCardSubheader = styled.p`
-  margin-top: 1vmax;
-  display: flex;
-  justify-content:flex-start;
-	font-size: 1.5vmax;
-  font-weight: 200;
+const ScoreCardSubheader = styled.div`
+  margin-top:-3.5%;
+  padding-left:2.5%;
+  padding-right:2.5%;
 `;
 
 const ScoreCardMiddleWrapper = styled.div`
@@ -158,11 +154,20 @@ class ScoreCard extends Component {
       return(
         <ScoreCardRankingWrapper>
           <ScoreCardUpperWrapper>
-            <ScoreCardRank>{rank}</ScoreCardRank>
-            <ScoreCardName>{restaurant_name}</ScoreCardName>
+            <ScoreCardRank>
+              <MainHeader>
+                {rank}
+              </MainHeader>
+            </ScoreCardRank>
+            <ScoreCardName>
+              <MainSubheader >
+                {restaurant_name}
+              </MainSubheader>
+              <Separator margin={'-5% 0 0 -5%'}/>
+            </ScoreCardName>
           </ScoreCardUpperWrapper>
 
-          <ScoreCardSubheader>{sub}</ScoreCardSubheader>
+          <ScoreCardSubheader><Subtitle color={'#555'}>{sub}</Subtitle></ScoreCardSubheader>
 
           <ScoreCardMiddleWrapper>
             <ScoreCardContentContainer>
