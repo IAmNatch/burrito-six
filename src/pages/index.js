@@ -61,7 +61,7 @@ export const pageQuery = graphql`
 						flavor_score
 						ingredient_score
 						review
-						resteraunt_name
+						restaurant_name
 						highlights {
 							highlight_data
 						}
