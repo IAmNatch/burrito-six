@@ -96,6 +96,10 @@ const ScoreCardShowMore = styled.p`
   color:white;
 `
 
+const ScoreCardMoreWrapper = styled.div`
+
+`
+
 
 class ScoreCard extends Component {
   state = {
@@ -149,10 +153,13 @@ class ScoreCard extends Component {
             
           </ScoreCardMiddleWrapper>
 
-          <ScoreCardBottomWrapper>
-            <ScoreCardShowMore onClick= { this.expandCard() }>More</ScoreCardShowMore>
-          </ScoreCardBottomWrapper>
+          
 
+         { this.state.open ? <ScoreCardMoreWrapper>aaaa</ScoreCardMoreWrapper> : null } 
+        
+         <ScoreCardBottomWrapper>
+            <ScoreCardShowMore onClick= { this.expandCard }>More</ScoreCardShowMore>
+          </ScoreCardBottomWrapper>
 
         </ScoreCardRankingWrapper>
       ) 
