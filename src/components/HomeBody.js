@@ -6,7 +6,7 @@ import { sortBy } from "lodash";
 const HomeBodyWrapper = styled.div`
 	padding-left: 20%;
 	padding-right: 20%;
-	background-color: orange;
+	background-color: #FDD112;
 	padding-top: 5%;
 	padding-bottom: 7.5%;
 `;

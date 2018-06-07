@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 
 const ScoreCardRankingWrapper = styled.div`
 	display:block;
-	box-shadow: 0 0 3px 3px rgba(1, 1, 1, 0.4);
+	box-shadow: 6px 6px 7px 1px rgba(1,1,1,0.25);
 	background-color: white;
   margin-bottom: 10%;
   padding-left:5%;
@@ -53,13 +53,13 @@ const ScoreCardContentContainer = styled.div`
   padding-right: 5%;
 `;
 
-const ScoreCardListWrapper = styled.div`
+const ScoreCardListWrapper = styled.ol`
   align-items:flex-start;
 `
 
 const ScoreCardContentListItem = styled.li`
   font-size: 1.5vmax;
-  display:block;
+  display:list-item;
 `;
 
 const ScoreCardAlignRight = styled.div`
@@ -71,57 +71,93 @@ const ScoreCardAlignRight = styled.div`
 const ScoreCardContentScore = styled.span`
   display:inline-block;
 	font-size: 5vmax;
-	font-weight: 700;
+  font-weight: 700;
+  margin-top:-2vmax;
+  color: #FDD112;
 `;
 
-const ScoreCardShowMore = styled.div`
-  height:100px;
-  width: 100px;
-  background-color:grey;
-  border-radius: 50%;
+const ScoreCardBottomWrapper = styled.div`
+  display:flex;
+  align-items:center;
+  justify-content:center;
 `
 
-export default props => {
-	const {
-		drip_score,
-		rank,
-		flavor_score,
-		highlights,
-		ingredient_score,
-		overall_score,
-		resteraunt_name,
-		review,
-		style_score,
-		sub,
-		title,
-	} = props.data;
-	return (
-		<ScoreCardRankingWrapper>
-      <ScoreCardUpperWrapper>
-        <ScoreCardRank>{rank}</ScoreCardRank>
-        <ScoreCardName>{resteraunt_name}</ScoreCardName>
-      </ScoreCardUpperWrapper>
-      
-			<ScoreCardSubheader>{sub}</ScoreCardSubheader>
+const ScoreCardShowMore = styled.p`
+  height:60px;
+  width: 60px;
+  margin-left:-5%;
+  background-color:grey;
+  border-radius: 50%;
+  margin-bottom:-30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  color:white;
+`
 
-      <ScoreCardMiddleWrapper>
-        <ScoreCardContentContainer>
-          <ScoreCardListWrapper>
-            <ScoreCardContentListItem>
-              {highlights[0].highlight_data}
-            </ScoreCardContentListItem>
-            <ScoreCardContentListItem>Crispy</ScoreCardContentListItem>
-            <ScoreCardContentListItem>Crispy</ScoreCardContentListItem>
-          </ScoreCardListWrapper>
-          <ScoreCardAlignRight>
-            <p>
-              <ScoreCardContentScore>{overall_score}</ScoreCardContentScore>/5
-            </p>
-          </ScoreCardAlignRight>
-        </ScoreCardContentContainer>
-      </ScoreCardMiddleWrapper>
-      <ScoreCardShowMore />
-		</ScoreCardRankingWrapper>
 
-	);
-};
+class ScoreCard extends Component {
+  state = {
+    open: false
+  }
+
+  expandCard = () => {
+    this.setState({
+      open: !this.state.open
+    })
+  }
+
+  render() {
+    let {
+      drip_score, 
+      rank,
+      flavor_score,
+      highlights,
+      ingredient_score,
+      overall_score,
+      resteraunt_name,
+      review,
+      style_score,
+      sub,
+      title } = this.props.data;
+
+      return(
+        <ScoreCardRankingWrapper>
+          <ScoreCardUpperWrapper>
+            <ScoreCardRank>{rank}</ScoreCardRank>
+            <ScoreCardName>{resteraunt_name}</ScoreCardName>
+          </ScoreCardUpperWrapper>
+          
+          <ScoreCardSubheader>{sub}</ScoreCardSubheader>
+
+          <ScoreCardMiddleWrapper>
+            <ScoreCardContentContainer>
+              <ScoreCardListWrapper>
+                <ScoreCardContentListItem>
+                  {highlights[0].highlight_data}
+                </ScoreCardContentListItem>
+                <ScoreCardContentListItem>Crispy</ScoreCardContentListItem>
+                <ScoreCardContentListItem>Crispy</ScoreCardContentListItem>
+              </ScoreCardListWrapper>
+              <ScoreCardAlignRight>
+                <p>
+                  <ScoreCardContentScore>{overall_score}</ScoreCardContentScore>/5
+                </p>
+              </ScoreCardAlignRight>
+            </ScoreCardContentContainer>
+            
+          </ScoreCardMiddleWrapper>
+
+          <ScoreCardBottomWrapper>
+            <ScoreCardShowMore onClick= { this.expandCard() }>More</ScoreCardShowMore>
+          </ScoreCardBottomWrapper>
+
+
+        </ScoreCardRankingWrapper>
+      ) 
+  }
+    
+}
+
+export default ScoreCard;
