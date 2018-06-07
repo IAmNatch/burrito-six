@@ -8,6 +8,8 @@ const PageWrapperStyled = styled.div`
 
 export const PageWrapper = (props) => {
     return (
-        <PageWrapperStyled>{props.children}</PageWrapperStyled>
+        <PageWrapperStyled>
+        {props.children}
+        </PageWrapperStyled>
     );
 }

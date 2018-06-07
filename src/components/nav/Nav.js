@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavWrapper, NavItemStyled } from './about/header/HeaderPrimitives.js';
+import { NavWrapper, NavItemStyled } from '../primitives/NavPrimitives.js';
 
 const NavItem = (props) => {
     return (
@@ -23,7 +23,7 @@ export const Nav = (props) => {
                     label="About"
                 />
             </NavWrapper>
-            <NavWrapper>
+            <NavWrapper style={{fontStyle: 'italic'}}>
                 <NavItem 
                     date="Last updated June 2018"
                 />

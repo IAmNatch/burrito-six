@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
-import Navbar from "../components/Navbar";
-
 const TemplateWrapper = ({ children }) => {
 		const {pathname} = window.location;
 		let background = pathname === "/" ? "#FDD112" : "#00AF96"

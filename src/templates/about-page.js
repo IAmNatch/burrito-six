@@ -2,12 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
 import Helmet from "react-helmet";
-import styled from "styled-components";
 
-import { PageWrapper } from "../components/about/Layout.js";
-import { Header } from "../components/about/header/Header.js";
-import { Description } from "../components/Description.js";
-import { Nav } from "../components/Nav.js";
+import { PageWrapper } from "../components/layout/Layout.js";
+import { Header } from "../components/header/Header.js";
+import { Description } from "../components/body/Description.js";
+import { Nav } from "../components/nav/Nav.js";
 
 export const AboutPageTemplate = ({
 	title,
