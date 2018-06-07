@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import Link from 'gatsby-link';
 import { NavWrapper, NavItemStyled } from '../primitives/NavPrimitives.js';
 
 const NavItem = (props) => {
@@ -16,12 +16,16 @@ export const Nav = (props) => {
     return (
         <NavWrapper>
             <NavWrapper>
-                <NavItem 
-                    title="Burrito-Six"
-                />
-                <NavItem 
-                    label="About"
-                />
+                <Link to="/">
+                    <NavItem 
+                        title="Burrito-Six"
+                    />
+                </Link>
+                <Link to="/about">
+                    <NavItem 
+                        label="About"
+                    />
+                </Link>
             </NavWrapper>
             <NavWrapper style={{fontStyle: 'italic'}}>
                 <NavItem 
