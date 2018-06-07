@@ -1,7 +1,7 @@
 ---
 templateKey: burrito-review
 title: Burrito Boyzzz
-resteraunt_name: Burrito Boyzzz
+restaurant_name: Burrito Boyzzz
 rank: 1
 sub: 'When you need a solid, tasty, burrito, day or night- Burrito Boyz is there. '
 highlights:
