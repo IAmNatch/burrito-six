@@ -4,6 +4,7 @@ import Link from "gatsby-link";
 
 import HomeSplash from "../components/HomeSplash";
 import HomeBody from "../components/HomeBody";
+import {Nav} from '../components/nav/nav.js';
 
 export default class IndexPage extends React.Component {
 	render() {
@@ -15,6 +16,7 @@ export default class IndexPage extends React.Component {
 		console.log("REVIEW", posts);
 		return (
 			<div>
+				<Nav />
 				<HomeSplash />
 				<HomeBody posts={posts} />
 			</div>
