@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+// primitives:
+import HomePrimitives, { MainHeader, MainSubheader, Separator, Subtitle, OrderedListItem, MainBigText, MainText } from './primitives/HomePrimitives'
 
 const ScoreCardRankingWrapper = styled.div`
 	display:block;
@@ -17,29 +19,23 @@ const ScoreCardLowerWrapper = styled.div`
   display:flex;
 `
 
-const ScoreCardRank = styled.h2`
-	font-size: 7vmax;
+const ScoreCardRank = styled.div`
   justify-content: flex-start;
-  margin-top:-5vmax;
-  font-weight: 700;
+  margin-top:-8vmax;
 `;
 
-const ScoreCardName = styled.p`
-	font-size: 3.5vmax;
+const ScoreCardName = styled.div`
   width: 50%;
   justify-content: flex-start;
 	font-weight: 700;
-  border-bottom: 2px solid #333;
   padding-bottom:0;
   margin-left:4vmin;
 `;
 
-const ScoreCardSubheader = styled.p`
-  margin-top: 1vmax;
-  display: flex;
-  justify-content:flex-start;
-	font-size: 1.5vmax;
-  font-weight: 200;
+const ScoreCardSubheader = styled.div`
+  margin-top:-3.5%;
+  padding-left:2.5%;
+  padding-right:2.5%;
 `;
 
 const ScoreCardMiddleWrapper = styled.div`
@@ -57,23 +53,16 @@ const ScoreCardListWrapper = styled.ol`
   align-items:flex-start;
 `
 
-const ScoreCardContentListItem = styled.li`
-  font-size: 1.5vmax;
-  display:list-item;
-`;
-
 const ScoreCardAlignRight = styled.div`
   display:flex;
   justify-content:flex-end;
-  margin-top:-3vmax;
+  margin-top:-7vmax;
+  margin-right: 5%;
 `;
 
 const ScoreCardContentScore = styled.span`
   display:inline-block;
-	font-size: 5vmax;
-  font-weight: 700;
   margin-top:-2vmax;
-  color: #FDD112;
 `;
 
 const ScoreCardBottomWrapper = styled.div`
@@ -97,9 +86,40 @@ const ScoreCardShowMore = styled.p`
 `
 
 const ScoreCardMoreWrapper = styled.div`
-
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  margin-left:-5%;
+  flex-direction:column;
+  padding-left:10%;
+  padding-right:10%;
 `
 
+const ScoreCardMoreSubtitle = styled.div`
+  padding-bottom:5px;
+  border-bottom: thin solid #333;
+`
+
+const ScoreCardMoreScoreWrapper = styled.div `
+  display:flex;
+  width:100%;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+const ScoreCardMoreScore = styled.div `
+  display:flex;
+  width:100%;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+`
+const ScoreCardMoreScoreRow = styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:row;
+`
 
 class ScoreCard extends Component {
   state = {
@@ -126,39 +146,60 @@ class ScoreCard extends Component {
       sub,
       title } = this.props.data;
 
+    let ScoreCardContentList = this.props.data.highlights.map((element)=> {
+      return ( <OrderedListItem> {element.highlight_data} </OrderedListItem>)
+    })
+
       return(
         <ScoreCardRankingWrapper>
           <ScoreCardUpperWrapper>
-            <ScoreCardRank>{rank}</ScoreCardRank>
-            <ScoreCardName>{restaurant_name}</ScoreCardName>
+            <ScoreCardRank>
+              <MainHeader>
+                {rank}
+              </MainHeader>
+            </ScoreCardRank>
+            <ScoreCardName>
+              <MainSubheader >
+                {restaurant_name}
+              </MainSubheader>
+              <Separator margin={'-5% 0 0 -5%'}/>
+            </ScoreCardName>
           </ScoreCardUpperWrapper>
 
-          <ScoreCardSubheader>{sub}</ScoreCardSubheader>
+          <ScoreCardSubheader><Subtitle color={'#555'}>{sub}</Subtitle></ScoreCardSubheader>
 
           <ScoreCardMiddleWrapper>
             <ScoreCardContentContainer>
               <ScoreCardListWrapper>
-                <ScoreCardContentListItem>
-                  {highlights[0].highlight_data}
-                </ScoreCardContentListItem>
-                <ScoreCardContentListItem>Crispy</ScoreCardContentListItem>
-                <ScoreCardContentListItem>Crispy</ScoreCardContentListItem>
+                { ScoreCardContentList }
               </ScoreCardListWrapper>
               <ScoreCardAlignRight>
-                <p>
-                  <ScoreCardContentScore>{overall_score}</ScoreCardContentScore>/5
-                </p>
+                  <ScoreCardContentScore><Subtitle centerV={true} color={'#666'}><MainBigText  margin={'3vmax 0.5vmax'} color={'#FDD112'}>{overall_score}</MainBigText>/5</Subtitle></ScoreCardContentScore>
               </ScoreCardAlignRight>
             </ScoreCardContentContainer>
 
           </ScoreCardMiddleWrapper>
 
-
-
-         { this.state.open ? <ScoreCardMoreWrapper>aaaa</ScoreCardMoreWrapper> : null }
+         { this.state.open ? 
+          <ScoreCardMoreWrapper> 
+            <ScoreCardMoreSubtitle>
+              <Subtitle centerV={true} color={'#666'}>
+              The Nitty Gritty
+              </Subtitle>
+            </ScoreCardMoreSubtitle> 
+            <ScoreCardMoreScoreWrapper>
+              <ScoreCardMoreScore><MainText>Flavour</MainText><ScoreCardMoreScoreRow><MainBigText color={'#F2994A'} margin={'0 0.5vmax'}>{flavor_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
+              <ScoreCardMoreScore><MainText>Drippage</MainText><ScoreCardMoreScoreRow><MainBigText color={'#9B51E0'} margin={'0 0.5vmax'}>{drip_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
+              <ScoreCardMoreScore><MainText>Ingredients</MainText><ScoreCardMoreScoreRow><MainBigText margin={'0 0.5vmax'} color={'#27AE60'}>{ingredient_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
+              <ScoreCardMoreScore><MainText>Style</MainText><ScoreCardMoreScoreRow><MainBigText margin={'0 0.5vmax'} color={'#EB5757'}>{style_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
+            </ScoreCardMoreScoreWrapper>
+            <MainText>
+                {review}
+            </MainText>
+          </ScoreCardMoreWrapper> : null }
 
          <ScoreCardBottomWrapper>
-            <ScoreCardShowMore onClick= { this.expandCard }>More</ScoreCardShowMore>
+            <ScoreCardShowMore onClick= { this.expandCard }> { this.state.open? 'Less' : "More" } </ScoreCardShowMore>
           </ScoreCardBottomWrapper>
 
         </ScoreCardRankingWrapper>

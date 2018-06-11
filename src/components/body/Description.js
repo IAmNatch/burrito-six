@@ -1,7 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import Content, { HTMLContent } from "./Content";
-import { BioWrapper, ContentWrapper } from './about/content/ContentPrimitives.js';
+import Content, { HTMLContent } from "../Content";
+import { BioWrapper, ContentWrapper } from '../primitives/ContentPrimitives.js';
 
 const ContentItem = (props) => {
     return (

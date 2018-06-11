@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
 export const BioWrapper = styled.div`
-
   max-width: 80vw;
   padding: 5%;
   box-shadow: 0 0 3px 3px rgba(1, 1, 1, 0.4);
   background-color: white;
-  
 `
 
 export const ContentWrapper = styled.div`

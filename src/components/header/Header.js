@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { HeaderWrapper, HeaderItemStyled } from './HeaderPrimitives.js';
+import { HeaderWrapper, HeaderItemStyled } from '../primitives/HeaderPrimitives.js';
 
 const HeaderItem = (props) => {
     return (
