@@ -4,7 +4,7 @@ import Link from "gatsby-link";
 
 import HomeSplash from "../components/HomeSplash";
 import HomeBody from "../components/HomeBody";
-import {Nav} from '../components/nav/nav.js';
+import { Nav } from "../components/nav/Nav.js";
 
 export default class IndexPage extends React.Component {
 	render() {
