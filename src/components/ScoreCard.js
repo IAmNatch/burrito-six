@@ -146,8 +146,8 @@ class ScoreCard extends Component {
       sub,
       title } = this.props.data;
 
-    let ScoreCardContentList = this.props.data.highlights.map((element)=> {
-      return ( <OrderedListItem> {element.highlight_data} </OrderedListItem>)
+    let ScoreCardContentList = this.props.data.highlights.map((element, i)=> {
+      return ( <OrderedListItem key={i}> {element.highlight_data} </OrderedListItem>)
     })
 
       return(
@@ -180,13 +180,13 @@ class ScoreCard extends Component {
 
           </ScoreCardMiddleWrapper>
 
-         { this.state.open ? 
-          <ScoreCardMoreWrapper> 
+         { this.state.open ?
+          <ScoreCardMoreWrapper>
             <ScoreCardMoreSubtitle>
               <Subtitle centerV={true} color={'#666'}>
               The Nitty Gritty
               </Subtitle>
-            </ScoreCardMoreSubtitle> 
+            </ScoreCardMoreSubtitle>
             <ScoreCardMoreScoreWrapper>
               <ScoreCardMoreScore><MainText>Flavour</MainText><ScoreCardMoreScoreRow><MainBigText color={'#F2994A'} margin={'0 0.5vmax'}>{flavor_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
               <ScoreCardMoreScore><MainText>Drippage</MainText><ScoreCardMoreScoreRow><MainBigText color={'#9B51E0'} margin={'0 0.5vmax'}>{drip_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>

@@ -8,12 +8,12 @@ const TemplateWrapper = ({ children }) => {
 		let background = "#FDD112";
 
 		return (
-			<div style={{ minHeight: '100vh', backgroundColor: background}}>
+			<div style={{backgroundColor: background}}>
 				<Helmet title="Burri.to | Home" >
 					<meta name="viewport" content="width=device-width, initial-scale=1" />
 					<link rel="stylesheet" type="text/css" href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' />
 				</Helmet>
-				<div>{children()}</div>
+				{children()}
 			</div>
 	)
 };

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 
+import { PageWrapper } from "../components/layout/Layout.js";
 import HomeSplash from "../components/HomeSplash";
 import HomeBody from "../components/HomeBody";
 import { Nav } from "../components/nav/Nav.js";
@@ -15,11 +16,11 @@ export default class IndexPage extends React.Component {
 		console.log("props in index", this.props);
 		console.log("REVIEW", posts);
 		return (
-			<div>
+			<PageWrapper>
 				<Nav />
 				<HomeSplash />
 				<HomeBody posts={posts} />
-			</div>
+			</ PageWrapper>
 		);
 	}
 }
