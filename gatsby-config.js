@@ -11,7 +11,17 @@ module.exports = {
 				path: `${__dirname}/src/pages`,
 				name: "pages",
 			},
-		},
+		},{
+    resolve: '@raygesualdo/gatsby-plugin-babel-styled-components',
+    options: {
+      ssr: false, // override default
+      displayName: true,
+			fileName: false, 
+      preprocess: false,
+      minify: false,
+      transpileTemplateLiterals: false,
+    },
+  },
 		{
 			resolve: "gatsby-source-filesystem",
 			options: {
