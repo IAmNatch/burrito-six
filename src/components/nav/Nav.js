@@ -2,6 +2,8 @@ import React from 'react';
 import NavLink from 'gatsby-link';
 import { NavWrapper, NavItemStyled } from '../primitives/NavPrimitives.js';
 
+
+
 const NavItem = (props) => {
     return (
         <NavItemStyled>
