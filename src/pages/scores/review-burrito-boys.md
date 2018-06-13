@@ -2,7 +2,7 @@
 templateKey: burrito-review
 title: Burrito Boyzzz
 restaurant_name: Burrito Boyzzz
-rank: 1
+rank: 2
 sub: 'When you need a solid, tasty, burrito, day or night- Burrito Boyz is there. '
 highlights:
   - highlight_data: My first
@@ -19,3 +19,4 @@ review: |2-
     salsa, but you also won't frown as it bursts all over your new shirt. Good
     shit.
 ---
+
