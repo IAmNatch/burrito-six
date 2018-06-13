@@ -12,6 +12,19 @@ module.exports = {
 				name: "pages",
 			},
 		},{
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+      },
+    },{
     resolve: '@raygesualdo/gatsby-plugin-babel-styled-components',
     options: {
       ssr: false, // override default
@@ -43,6 +56,7 @@ module.exports = {
 				modulePath: `${__dirname}/src/cms/cms.js`,
 			},
 		},
+		
 
 		"gatsby-plugin-netlify", // make sure to keep it last in the array
 	],

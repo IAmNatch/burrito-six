@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
-
+// Primitives
+import {Title} from './primitives/Text';
 const HomeSplashWrapper = styled.div`
     display: flex;
     justify-content: center;
@@ -21,17 +22,9 @@ const HomeSplashOverlay = styled.div`
 
 `
 
-const HomeSplashTitle = styled.h1`
-    font-size:3.5vmax;
-    font-weight:700;   
-    text-align:center;
-    color:#333;
-    z-index:1;
-`
 
 export default () => (
     <HomeSplashWrapper>
-        <HomeSplashOverlay />
-        <HomeSplashTitle> Burri.To </HomeSplashTitle>
+        <Title> Burri.To </Title>
     </HomeSplashWrapper>
 )
