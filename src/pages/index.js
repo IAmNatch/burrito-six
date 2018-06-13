@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import Link from "gatsby-link";
 
 import { PageWrapper } from "../components/layout/Layout.js";
-import HomeSplash from "../components/HomeSplash";
 import HomeBody from "../components/HomeBody";
 import { Nav } from "../components/nav/Nav.js";
+import {Header} from "../components/header/Header";
 
 export default class IndexPage extends React.Component {
 	render() {
@@ -18,7 +18,7 @@ export default class IndexPage extends React.Component {
 		return (
 			<PageWrapper>
 				<Nav />
-				<HomeSplash />
+				<Header title={"Burri.To"}/>
 				<HomeBody posts={posts} />
 			</ PageWrapper>
 		);
