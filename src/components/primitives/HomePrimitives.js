@@ -6,12 +6,12 @@ export const MainHeader = styled.h1`
 `
 
 export const MainSubheader = styled.h2`
-    font-size: 2.5vmax;
+    font-size: 2.1vmax;
     font-weight: 700;
 `
 
 export const Subtitle = styled.p`
-    font-size: 1.25vmax;
+    font-size: 1.5vmax;
     font-weight:200;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
@@ -27,7 +27,7 @@ export const Separator = styled.div`
 `
 
 export const OrderedListItem = styled.li`
-    font-size: 1.25vmax;
+    font-size: 1.5vmax;
     display:list-item;
     line-height: 1.5;
 `
@@ -39,7 +39,7 @@ export const MainBigText = styled.p`
 `
 
 export const MainText = styled.p`
-    font-size: 1vmax;
+    font-size: 1.5vmax;
     color: #333;
     font-weight:400;
 `
