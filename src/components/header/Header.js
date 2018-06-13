@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { HeaderWrapper, HeaderItemStyled } from '../primitives/HeaderPrimitives.js';
-
-const HeaderItem = (props) => {
-    return (
-        <HeaderItemStyled>{props.title}</HeaderItemStyled>
-    );
-}
+import { HeaderWrapper } from '../primitives/HeaderPrimitives.js';
+import {Title} from '../primitives/Text';
+// const HeaderItem = (props) => {
+//     return (
+//         <HeaderItemStyled>{props.title}</HeaderItemStyled>
+//     );
+// }
 
 export const Header = (props) => {
     return (
         <HeaderWrapper>
-            <HeaderItem title={props.title} />
+            <Title>{props.title}</Title>
         </HeaderWrapper>
     );
 }
