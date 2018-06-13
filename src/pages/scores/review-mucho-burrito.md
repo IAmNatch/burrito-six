@@ -1,6 +1,7 @@
 ---
 templateKey: burrito-review
 title: Mucho Burrito
+date: '2018-06-02'
 restaurant_name: Mucho Burrito
 rank: 6
 sub: >-
