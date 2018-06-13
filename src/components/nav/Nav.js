@@ -31,7 +31,7 @@ export const Nav = (props) => {
             </NavWrapper>
             <NavWrapper style={{fontStyle: 'italic'}}>
                 <NavItem 
-                    date="Last updated June 2018"
+                    date={props.date}
                 />
             </NavWrapper>
         </NavWrapper>
