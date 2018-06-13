@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const BioWrapper = styled.div`
   max-width: 80vw;
   padding: 5%;
-  box-shadow: 0 0 3px 3px rgba(1, 1, 1, 0.4);
+  box-shadow: 1px 1px 3px 1px rgba(1,1,1,0.4);
   background-color: white;
 `
 
