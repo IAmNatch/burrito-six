@@ -15,7 +15,8 @@ const HomeBodyTitle = styled.h1`
 	padding:2.5%;
 	background:white;
 	text-align:center;
-	margin:0 10% 10% 10%;
+	margin:0 15% 10% 15%;
+	font-size:2.5vmax;
 `
 
 // const AllScoreCards = props.
