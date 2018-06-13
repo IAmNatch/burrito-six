@@ -20,6 +20,7 @@
     "lodash": "^4.17.10",
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "^1.7.0",
+    "normalize.css": "^8.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-helmet": "^5.2.0",
