@@ -75,7 +75,7 @@ const ScoreCardShowMore = styled.p`
   height:60px;
   width: 60px;
   margin-left:-5%;
-  background-color:grey;
+  background-color: black;
   border-radius: 50%;
   margin-bottom:-30px;
   display:flex;
@@ -83,6 +83,7 @@ const ScoreCardShowMore = styled.p`
   justify-content:center;
   cursor:pointer;
   color:white;
+	user-select: none;
 `
 
 const ScoreCardMoreWrapper = styled.div`
