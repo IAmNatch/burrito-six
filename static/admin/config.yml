@@ -14,6 +14,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "burrito-review"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "date"}
       - {label: "Restaurant Name", name: "restaurant_name", widget: "string"}
       - {label: "Rank", name: "rank", widget: "number", valueType: "float"}
       - {label: "Short-Description", name: "sub", widget: "text"}

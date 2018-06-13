@@ -1,6 +1,7 @@
 ---
 templateKey: burrito-review
 title: Wilbur Mexicana
+date: '2018-06-12'
 restaurant_name: Wilbur Mexicana
 rank: 1
 sub: 'The best of the best. The goodest of the good. Wavy asf. '
