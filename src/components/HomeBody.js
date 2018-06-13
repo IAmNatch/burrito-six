@@ -10,6 +10,14 @@ const HomeBodyWrapper = styled.div`
 	padding-top: 5%;
 	padding-bottom: 7.5%;
 `;
+
+const HomeBodyTitle = styled.h1`
+	padding:2.5%;
+	background:white;
+	text-align:center;
+	margin:0 10% 10% 10%;
+`
+
 // const AllScoreCards = props.
 
 export default props => {
@@ -23,5 +31,5 @@ export default props => {
 		},
 	]);
 
-	return <HomeBodyWrapper>{ScoreCardsSorted}</HomeBodyWrapper>;
+	return <HomeBodyWrapper><HomeBodyTitle>The Rankings</HomeBodyTitle>{ScoreCardsSorted}</HomeBodyWrapper>;
 };
