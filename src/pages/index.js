@@ -13,13 +13,17 @@ export default class IndexPage extends React.Component {
 		const { page, scores, dateupdated } = data;
 		const { edges: posts } = scores;
 
+		const date = dateupdated.edges[0].node.frontmatter.date;
+		
+		console.log(date)
 		console.log('THIS IS DATA', data)
 		// const frontmatter = posts[0].node.frontmatter;
 		console.log("props in index", this.props);
 		//console.log("REVIEW", posts);
+
 		return (
 			<PageWrapper>
-				<Nav date={'dani'}/>
+				<Nav date={"Last Updated " + date}/>
 				<Header title={"Burri.To"}/>
 				<HomeBody posts={posts} />
 			</ PageWrapper>
