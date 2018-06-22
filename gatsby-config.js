@@ -29,7 +29,7 @@ module.exports = {
     options: {
       ssr: false, // override default
       displayName: true,
-			fileName: false, 
+			fileName: false,
       preprocess: false,
       minify: false,
       transpileTemplateLiterals: false,
@@ -56,7 +56,7 @@ module.exports = {
 				modulePath: `${__dirname}/src/cms/cms.js`,
 			},
 		},
-		
+
 
 		"gatsby-plugin-netlify", // make sure to keep it last in the array
 	],
