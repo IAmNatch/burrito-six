@@ -11,7 +11,7 @@ export const ScoreCardWrapper = styled.div`
   transform: scale(0.9);
     @media only screen and (max-width: 600px) {
       grid-template-columns: 9vw 36vw 36vw 9vw;
-      grid-template-rows: 3em 3em 1em 1em 6em auto 1em 2em;
+      grid-template-rows: 3em 3em 1em 1em 6em auto 2em 2em;
     }
     @media only screen and (min-width: 1100px) {
       transform: scale(0.8);
@@ -25,7 +25,7 @@ export const CardTop = styled.div`
   z-index: 2;
 
   width: fit-content;
-  padding-right: 1.5vmax;
+  padding-right: 1em;
 
   display: flex;
 
@@ -37,7 +37,7 @@ export const Subtitle = styled.p`
     z-index: 2;
     grid-column: 2/4;
     grid-row: 3/5;
-    font-size: 2vmax;
+    font-size: 1.5em;
 
     margin: 1vw 0;
 
@@ -45,7 +45,7 @@ export const Subtitle = styled.p`
     color: grey;
 
     @media only screen and (max-width: 600px) {
-      font-size: 2.5vmax;
+      font-size: .8em;
     }
 
 `
@@ -65,16 +65,20 @@ const ScoreNumber = styled.p`
   color: ${props => (props.color ? props.color : colors.orange)};
 
   margin: 0;
-  font-size: 8vmax;
+  font-size: 5em;
   line-height: 0.9;
   font-weight: 700;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 3em;
+  }
 `
 
 const Score = ({ score = 4.3, color }) => {
   return (
     <ScoreWrapper>
       <ScoreNumber color={color}>{score}</ScoreNumber>
-      <p style={{ margin: "0 5px", fontWeight: "bold", fontSize: "2vmax"}}>/5</p>
+      <p style={{ margin: "0 5px", fontWeight: "bold", fontSize: "1em"}}>/5</p>
     </ScoreWrapper>)
 }
 
@@ -112,7 +116,7 @@ const ExpandButton = styled.button`
 const Expander = transition.div`
   overflow: hidden;
   transform-origin: top;
-  margin: 4vmax 0 2vmax;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -124,16 +128,16 @@ const Expander = transition.div`
 
   }
   &:enter-active {
-      height: 45vmax;
-      opacity: 1;
-      transform: scaleY(1);
+    height: 30em;
+    opacity: 1;
+    transform: scaleY(1);
 
-      @media only screen and (max-width: 600px) {
-      height: 17em;
-      }
+    @media only screen and (max-width: 600px) {
+    height: 17em;
+    }
   }
   &:exit {
-    height: 45vmax;
+    height: 30em;
     opacity: 1;
     align-self: flex-end;
     @media only screen and (max-width: 600px) {
@@ -146,17 +150,24 @@ const Expander = transition.div`
   }
 `
 const EndText = styled.p`
-  font-size: 2.5vmax;
+  font-size: 1.5em;
   max-width: '90%';
+  @media only screen and (max-width: 600px) {
+    font-size: 1em;
+  }
 `
 
 const Subheading = styled.h3`
-  margin: 10px 0 3vmax;
-  font-size: 2.5vmax;
+  margin: 2.5em 0 1.5em;
+  font-size: 1.5em;
   font-weight: 700;
   font-family: 'Nunito Sans', sans-serif;
   line-height: 0.8;
   border-bottom: 2px solid lightgrey;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 1em;
+  }
 `
 
 const ToggleButton = ({ on, expanded, closed, onToggle, ...props }) => {
@@ -165,8 +176,10 @@ const ToggleButton = ({ on, expanded, closed, onToggle, ...props }) => {
 
 const CardTitle = styled.h2`
   margin: 2vw 0vw 0vw;
-
-  font-size: 4.5vmax;
+  font-size: 3.5em;
+  @media only screen and (max-width: 600px) {
+    font-size: 1.5em;
+  }
 `
 
 export class ScoreCard extends React.Component {

@@ -19,12 +19,16 @@ const HomeBodyWrapper = styled.div`
 `;
 
 const HomeBodyTitle = styled.h1`
-	padding:2.5%;
-	background:white;
-	text-align:center;
-	margin:0 15% 20px 15%;
-	font-size: 2em;
+	margin: 0;
 `
+const HomeBodyTitleWrap = styled.div`
+background: white;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1em;
+`
+
+
 // START
 import { Donut } from "./charts/";
 import { OList } from "./primitives/Lists";
@@ -57,9 +61,12 @@ class ScoreCardUnique extends React.Component {
 
   render() {
     let { on } = this.state;
+		console.log(this.props.data)
 			let {
 			title,
+			sub,
 			rank,
+			highlights,
 			overall_score,
 			drip_score,
 			style_score,
@@ -67,7 +74,7 @@ class ScoreCardUnique extends React.Component {
 			ingredient_score,
 			review,
 			restaurant_name} = this.props.data;
-
+			const highlightsFormatted = highlights.map(item => item.highlight_data)
     return (
         <ScoreCard
           onToggle={status => {
@@ -83,9 +90,9 @@ class ScoreCardUnique extends React.Component {
           </ScoreCard.Top>
           {/* Below The Line*/}
           <ScoreCard.Subtitle>
-            A wonderful place for good people.
+            {sub || 'I should be a subtitle!'}
           </ScoreCard.Subtitle>
-          <OList zindex={2} column={"2/3"} row={"5/6"} />
+          <OList items={highlightsFormatted} zindex={2} column={"2/3"} row={"5/6"} />
           <ScoreCard.Score score={2.2} color={colors.yellow} />
           <TransitionGroup
             style={{ gridRow: "6/7", gridColumn: "2/4", zIndex: 2 }}
@@ -94,17 +101,13 @@ class ScoreCardUnique extends React.Component {
               <ScoreCard.Expander timeout={410}>
                 <ScoreCard.Subheading>The Nitty Gritty</ScoreCard.Subheading>
                 <this.ChartWrapper>
-                  <Donut title={"Flavor"} color={colors.orange} />
-                  <Donut title={"Fresh"} color={colors.purple} />
-                  <Donut title={"Drip"} color={colors.green} />
-                  <Donut title={"Style"} color={colors.red} />
+                  <Donut score={flavor_score} title={"Flavor"} color={colors.orange} />
+                  <Donut score={ingredient_score} title={"Fresh"} color={colors.purple} />
+                  <Donut score={drip_score} title={"Drip"} color={colors.green} />
+                  <Donut score={style_score} title={"Style"} color={colors.red} />
                 </this.ChartWrapper>
                 <ScoreCard.EndText>
-                  <strong>Lee</strong> smartly topgallant bowsprit Jack Ketch
-                  bilged on her anchor gangplank swing the lead gangway. Lanyard
-                  Admiral of the Black lad starboard belay six pounders lateen
-                  sail tackle Privateer. Lass Corsair bucko lookout pinnace
-                  lanyard shrouds Gold Road stern.
+                  <strong>{review.replace(/ .*/,'')}</strong> {review.split(" ").splice(1).join(" ")}
                 </ScoreCard.EndText>
               </ScoreCard.Expander>
             ) : null}
@@ -127,7 +130,9 @@ export default props => {
 	]);
 
 	return <HomeBodyWrapper>
+					<HomeBodyTitleWrap>
 						<HomeBodyTitle>The Rankings</HomeBodyTitle>
+					</HomeBodyTitleWrap>
 						{ScoreCardsSorted}
 					</HomeBodyWrapper>;
 };

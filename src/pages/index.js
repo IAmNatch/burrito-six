@@ -14,7 +14,7 @@ export default class IndexPage extends React.Component {
 		const { edges: posts } = scores;
 
 		const date = dateupdated.edges[0].node.frontmatter.date;
-		
+
 		console.log(date)
 		console.log('THIS IS DATA', data)
 		// const frontmatter = posts[0].node.frontmatter;
@@ -23,7 +23,7 @@ export default class IndexPage extends React.Component {
 
 		return (
 			<PageWrapper>
-				<Nav date={"Last Updated " + date}/>
+				<Nav date={"Updated August 2018"}/>
 				<Header title={"Burri.To"}/>
 				<HomeBody posts={posts} />
 			</ PageWrapper>
@@ -91,7 +91,7 @@ query IndexQuery {
 			node {
 				id
 				frontmatter {
-					date 
+					date
 				}
 				}
 			}

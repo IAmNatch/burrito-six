@@ -14,4 +14,9 @@ export const NavItemStyled = styled.p`
     color: black;
     font-size: 1em;
     padding: 10px;
+
+    :hover {
+      color: grey;
+      transform: translate(0, -2%);
+    }
 `

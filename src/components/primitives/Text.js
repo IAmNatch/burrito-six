@@ -8,8 +8,8 @@ export const Title = styled.h1`
 export const BigLetter = styled.h1`
   font-family: 'Nunito Sans', sans-serif;
   margin: 0;
-  margin-top: -5vmax
+  margin-top: -0.5em;
   display: block;
 
-  font-size: 10vmax;
+  font-size: 5.5em;
 `

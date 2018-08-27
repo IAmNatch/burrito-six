@@ -19,18 +19,18 @@ export const Nav = (props) => {
         <NavWrapper>
             <NavWrapper>
                 <NavLink to="/" style={{ textDecoration: 'none' }}>
-                    <NavItem 
-                        title="Burrito-Six"
+                    <NavItem
+                        title="Burrito Six"
                     />
                 </NavLink>
                 <NavLink to="/about" style={{ textDecoration: 'none' }}>
-                    <NavItem 
+                    <NavItem
                         label="About"
                     />
                 </NavLink>
             </NavWrapper>
             <NavWrapper style={{fontStyle: 'italic'}}>
-                <NavItem 
+                <NavItem
                     date={props.date}
                 />
             </NavWrapper>

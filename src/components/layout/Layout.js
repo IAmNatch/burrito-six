@@ -8,7 +8,7 @@ injectGlobal`
 `
 
 const PageWrapperStyled = styled.div`
-	grid-template-rows: [nav]10vh [jumbo]30vh [content] auto;
+	grid-template-rows: [nav]10vh [jumbo]40vh [content] auto;
 	display: grid;
 
 	width: 100vw;

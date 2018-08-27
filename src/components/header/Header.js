@@ -11,7 +11,8 @@ import {Title} from '../primitives/Text';
 export const Header = (props) => {
     return (
         <HeaderWrapper>
-            <Title>{props.title}</Title>
+            <img style={{width: "20em"}} src={"./img/logo.svg"}/>
+            {/*<Title>{props.title}</Title>*/}
         </HeaderWrapper>
     );
 }

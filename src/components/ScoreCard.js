@@ -19,10 +19,7 @@ const ScoreCardLowerWrapper = styled.div`
   display:flex;
 `
 
-const ScoreCardRank = styled.div`
-  justify-content: flex-start;
-  margin-top:-8vmax;
-`;
+
 
 const ScoreCardName = styled.div`
   width: 50%;
@@ -53,17 +50,6 @@ const ScoreCardListWrapper = styled.ol`
   align-items:flex-start;
 `
 
-const ScoreCardAlignRight = styled.div`
-  display:flex;
-  justify-content:flex-end;
-  margin-top:-7vmax;
-  margin-right: 5%;
-`;
-
-const ScoreCardContentScore = styled.span`
-  display:inline-block;
-  margin-top:-2vmax;
-`;
 
 const ScoreCardBottomWrapper = styled.div`
   display:flex;
@@ -189,10 +175,10 @@ class ScoreCard extends Component {
               </Subtitle>
             </ScoreCardMoreSubtitle>
             <ScoreCardMoreScoreWrapper>
-              <ScoreCardMoreScore><MainText>Flavour</MainText><ScoreCardMoreScoreRow><MainBigText color={'#F2994A'} margin={'0 0.5vmax'}>{flavor_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
-              <ScoreCardMoreScore><MainText>Drippage</MainText><ScoreCardMoreScoreRow><MainBigText color={'#9B51E0'} margin={'0 0.5vmax'}>{drip_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
-              <ScoreCardMoreScore><MainText>Ingredients</MainText><ScoreCardMoreScoreRow><MainBigText margin={'0 0.5vmax'} color={'#27AE60'}>{ingredient_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
-              <ScoreCardMoreScore><MainText>Style</MainText><ScoreCardMoreScoreRow><MainBigText margin={'0 0.5vmax'} color={'#EB5757'}>{style_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
+              <ScoreCardMoreScore><MainText>Flavour</MainText><ScoreCardMoreScoreRow><MainBigText color={'#F2994A'} margin={'0'}>{flavor_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
+              <ScoreCardMoreScore><MainText>Drippage</MainText><ScoreCardMoreScoreRow><MainBigText color={'#9B51E0'} margin={'0'}>{drip_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
+              <ScoreCardMoreScore><MainText>Ingredients</MainText><ScoreCardMoreScoreRow><MainBigText margin={'0'} color={'#27AE60'}>{ingredient_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
+              <ScoreCardMoreScore><MainText>Style</MainText><ScoreCardMoreScoreRow><MainBigText margin={'0'} color={'#EB5757'}>{style_score}</MainBigText><Subtitle centerV={true}>/5</Subtitle></ScoreCardMoreScoreRow> </ScoreCardMoreScore>
             </ScoreCardMoreScoreWrapper>
             <MainText>
                 {review}
