@@ -1,22 +1,22 @@
 ---
 templateKey: burrito-review
 title: Wilbur Mexicana
-date: '2018-06-12'
 restaurant_name: Wilbur Mexicana
 rank: 1
-sub: 'The best of the best. The goodest of the good. Wavy asf. '
+sub: 'A trendy King West burritorie with plentiful taste options and a dope patio. '
 highlights:
-  - highlight_data: Delightful Aesthetic
-  - highlight_data: Cute Staff
-  - highlight_data: Tasty Nibblers
+  - highlight_data: Rows and rows of hot sauces to explore
+  - highlight_data: Tightly wrapped thick tortillas keep your hands mostly dry.
+  - highlight_data: Pickled veggies are a must.
 overall_score: 4.7
 flavor_score: 4.5
-drip_score: 4.5
+drip_score: 4
 ingredient_score: 5
 style_score: 5
 review: >-
-  They make the good shit. The shit is good because it comes from good cows. The
-  cows come from good families. Their families are kind. But an agressive kinda
-  kind. Like Mr. Miagi.
+  Wilbur is a great spot to grab a burrito and spend an afternoon. With Mexican
+  beer and a strong variety of add ons and hot sauces, there's always something
+  new to explore. The ingredients are so fresh and the restaurants cool interior
+  make it a sure list topper.
 ---
 
